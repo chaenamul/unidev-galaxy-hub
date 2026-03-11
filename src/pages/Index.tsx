@@ -108,7 +108,8 @@ const Index = () => {
       {eventSections.map((event, index) => (
         <section
           key={event.title}
-          className={`px-6 py-24 ${index % 2 === 0 ? "bg-card" : "bg-background"}`}
+          id={`section-${event.title}`}
+          className={`px-6 py-24 min-h-[67vh] flex items-center ${index % 2 === 0 ? "bg-card" : "bg-background"}`}
         >
           <div
             className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
