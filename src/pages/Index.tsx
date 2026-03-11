@@ -58,10 +58,15 @@ const eventSections = [
 ];
 
 const Index = () => {
+  const scrollToSection = (title: string) => {
+    const el = document.getElementById(`section-${title}`);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center min-h-screen px-6">
+      <section className="flex flex-col items-center justify-center h-[50vh] px-6">
         <img
           src={unidevLogo}
           alt="UNIDEV - Game Developers Group"
@@ -70,9 +75,6 @@ const Index = () => {
         <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono">
           Game Developers Group
         </p>
-        <div className="mt-16 animate-bounce">
-          <div className="w-px h-12 bg-muted-foreground/40 mx-auto" />
-        </div>
       </section>
 
       {/* Events Overview */}
@@ -84,7 +86,8 @@ const Index = () => {
           {events.map((event) => (
             <div
               key={event.title}
-              className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-default"
+              onClick={() => scrollToSection(event.title)}
+              className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer"
             >
               <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
               <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
@@ -105,7 +108,8 @@ const Index = () => {
       {eventSections.map((event, index) => (
         <section
           key={event.title}
-          className={`px-6 py-24 ${index % 2 === 0 ? "bg-card" : "bg-background"}`}
+          id={`section-${event.title}`}
+          className={`px-6 py-24 min-h-[67vh] flex items-center ${index % 2 === 0 ? "bg-card" : "bg-background"}`}
         >
           <div
             className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
