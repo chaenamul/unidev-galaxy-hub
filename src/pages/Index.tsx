@@ -118,7 +118,7 @@ const Index = () => {
             }`}
           >
             {/* Image Area */}
-            <div className={`${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`}>
+            <div className={`animate-soft-land ${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`} style={{ animationDelay: '0.1s' }}>
               <div className="overflow-hidden rounded-lg border border-border">
                 <img
                   src={eventPlaceholder}
