@@ -88,7 +88,7 @@ const Index = () => {
               key={event.title}
               onClick={() => scrollToSection(event.title)}
               className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
-              style={{ animationDelay: `${0.25 + index * 0.1}s` }}
+              style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
             >
               <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
               <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
