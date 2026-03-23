@@ -70,9 +70,9 @@ const Index = () => {
         <img
           src={unidevLogo}
           alt="UNIDEV - Game Developers Group"
-          className="w-full max-w-2xl mb-8 invert"
+          className="w-full max-w-2xl mb-8 invert animate-soft-land"
         />
-        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono">
+        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono animate-soft-land" style={{ animationDelay: '0.1s' }}>
           Game Developers Group
         </p>
       </section>
