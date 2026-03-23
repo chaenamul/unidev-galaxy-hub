@@ -83,7 +83,7 @@ const Index = () => {
           Our Events
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {events.map((event) => (
+          {events.map((event, idx) => (
             <div
               key={event.title}
               onClick={() => scrollToSection(event.title)}
