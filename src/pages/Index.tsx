@@ -70,24 +70,25 @@ const Index = () => {
         <img
           src={unidevLogo}
           alt="UNIDEV - Game Developers Group"
-          className="w-full max-w-2xl mb-8 invert"
+          className="w-full max-w-2xl mb-8 invert animate-soft-land"
         />
-        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono">
+        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono animate-soft-land" style={{ animationDelay: '0.1s' }}>
           Game Developers Group
         </p>
       </section>
 
       {/* Events Overview */}
       <section className="px-6 pb-32 max-w-6xl mx-auto">
-        <h2 className="text-center text-muted-foreground tracking-[0.3em] uppercase text-sm mb-16 font-mono">
+        <h2 className="text-center text-muted-foreground tracking-[0.3em] uppercase text-sm mb-16 font-mono animate-soft-land" style={{ animationDelay: '0.2s' }}>
           Our Events
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {events.map((event) => (
+          {events.map((event, idx) => (
             <div
               key={event.title}
               onClick={() => scrollToSection(event.title)}
-              className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer"
+              className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
+              style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
             >
               <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
               <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
@@ -117,7 +118,7 @@ const Index = () => {
             }`}
           >
             {/* Image Area */}
-            <div className={`${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`}>
+            <div className={`animate-soft-land ${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`} style={{ animationDelay: '0.1s' }}>
               <div className="overflow-hidden rounded-lg border border-border">
                 <img
                   src={eventPlaceholder}
@@ -129,7 +130,7 @@ const Index = () => {
             </div>
 
             {/* Content Area */}
-            <div className={`${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`}>
+            <div className={`animate-soft-land ${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`} style={{ animationDelay: '0.2s' }}>
               {/* Event Logo */}
               <div className="flex items-center gap-3 mb-4">
                 <event.icon className="w-10 h-10 text-foreground" />
