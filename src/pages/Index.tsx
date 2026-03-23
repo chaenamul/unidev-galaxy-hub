@@ -130,7 +130,7 @@ const Index = () => {
             </div>
 
             {/* Content Area */}
-            <div className={`${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`}>
+            <div className={`animate-soft-land ${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`} style={{ animationDelay: '0.2s' }}>
               {/* Event Logo */}
               <div className="flex items-center gap-3 mb-4">
                 <event.icon className="w-10 h-10 text-foreground" />
