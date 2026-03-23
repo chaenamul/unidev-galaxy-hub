@@ -79,7 +79,7 @@ const Index = () => {
 
       {/* Events Overview */}
       <section className="px-6 pb-32 max-w-6xl mx-auto">
-        <h2 className="text-center text-muted-foreground tracking-[0.3em] uppercase text-sm mb-16 font-mono">
+        <h2 className="text-center text-muted-foreground tracking-[0.3em] uppercase text-sm mb-16 font-mono animate-soft-land" style={{ animationDelay: '0.2s' }}>
           Our Events
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
