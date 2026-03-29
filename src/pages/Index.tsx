@@ -6,21 +6,21 @@ import { Button } from "@/components/ui/button";
 const events = [
   {
     title: "UNICON",
-    subtitle: "Indie Game Show",
+    subtitle: "대학생 게임 전시회",
     description:
       "Showcase your indie creations to the world. Play, present, and connect with fellow developers at our flagship exhibition event.",
     icon: Gamepad2,
   },
   {
     title: "UNIJAM",
-    subtitle: "Gamejam for Members",
+    subtitle: "대학생 게임잼",
     description:
       "48 hours. One theme. Infinite possibilities. Team up or go solo — build a game from scratch and push your creative limits.",
     icon: Trophy,
   },
   {
     title: "UNICODE",
-    subtitle: "Game Developers Conference",
+    subtitle: "인디 개발 컨퍼런스",
     description:
       "Talks, panels, and workshops from industry veterans and rising stars. Level up your craft at our annual developers conference.",
     icon: Code2,
@@ -94,7 +94,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
                 {event.title}
               </h3>
-              <p className="text-muted-foreground text-sm uppercase tracking-widest mb-4">
+              <p className="text-muted-foreground font-bold text-sm uppercase tracking-widest mb-4">
                 {event.subtitle}
               </p>
               <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
