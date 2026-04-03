@@ -1,28 +1,31 @@
 import { Gamepad2, Trophy, Code2, ExternalLink } from "lucide-react";
 import unidevLogo from "@/assets/UNIDEV_Logo_Horizontal.png";
-import eventPlaceholder from "@/assets/event-placeholder.jpg";
 import { Button } from "@/components/ui/button";
+import uniconImage from "@/assets/unicon.jpg"
+import unijamImage from "@/assets/unijame.jpg";
+import unicodeImage from "@/assets/unicode.jpg"
+import Footer from "@/components/Footer";
 
 const events = [
   {
     title: "UNICON",
     subtitle: "Indie Game Show",
     description:
-      "Showcase your indie creations to the world. Play, present, and connect with fellow developers at our flagship exhibition event.",
+      "여러분의 인디 게임을 세상에 선보여 보세요. 플레이, 발표, 그리고 개발자들과 교류할 수 있는 대표 전시 행사입니다.",
     icon: Gamepad2,
   },
   {
     title: "UNIJAM",
     subtitle: "Gamejam for Members",
     description:
-      "48 hours. One theme. Infinite possibilities. Team up or go solo — build a game from scratch and push your creative limits.",
+      "48시간, 하나의 주제, 무한한 가능성. 팀 또는 개인으로 참여해, 처음부터 게임을 만들어 창의력의 한계를 확장해 보세요.",
     icon: Trophy,
   },
   {
     title: "UNICODE",
     subtitle: "Game Developers Conference",
     description:
-      "Talks, panels, and workshops from industry veterans and rising stars. Level up your craft at our annual developers conference.",
+      "베테랑부터 라이징 스타까지, 다양한 개발자들을 만나보세요. 강연, 패널, 워크숍을 통해 게임 개발 역량을 한 단계 끌어올려 보세요.",
     icon: Code2,
   },
 ];
@@ -32,27 +35,30 @@ const eventSections = [
     title: "UNICON",
     subtitle: "Indie Game Show",
     description:
-      "UNICON is our flagship indie game exhibition where student developers showcase their creations to a live audience. Whether you're presenting a polished title or an early prototype, UNICON is the stage to share your vision and get real feedback from fellow creators and players.",
+      "UNICON은 학생 개발자들이 자신의 게임을 실제 관객 앞에서 선보이는 대표적인 인디 게임 전시 행사입니다. 완성도 높은 작품이든 초기 프로토타입이든, 여러분의 비전을 공유하고 개발자와 플레이어들로부터 생생한 피드백을 받을 수 있는 무대입니다.",
     link: "https://unicode.unidev.kr/",
     icon: Gamepad2,
+    image: uniconImage,
     imagePosition: "left" as const,
   },
   {
     title: "UNIJAM",
     subtitle: "Gamejam for Members",
     description:
-      "UNIJAM is a 48-hour game jam exclusively for UNIDEV members. Given a surprise theme, participants form teams or go solo to design, develop, and deliver a playable game from scratch. It's intense, creative, and one of the most rewarding experiences in our community.",
-    link: "https://unicode.unidev.kr/",
+      "UNIJAM은 오직 UNIDEV 회원만을 위한 48시간 게임잼입니다. 예고 없이 주어지는 주제에 따라 참가자들은 팀을 이루거나 개인으로 참여해, 처음부터 플레이 가능한 게임을 직접 만들어 완성하게 됩니다. 강도 높은 몰입과 창의성을 경험할 수 있는, UNIDEV의 대표적인 핵심 프로그램입니다.",
+    link: "https://on.com2us.com/esg/unijam-with-com2us-gamejam-sketch/",
     icon: Trophy,
+    image: unijamImage,
     imagePosition: "right" as const,
   },
   {
     title: "UNICODE",
     subtitle: "Game Developers Conference",
     description:
-      "UNICODE is our annual game developers conference featuring talks, panels, and hands-on workshops. Industry professionals and passionate students come together to share knowledge, explore new technologies, and discuss the future of game development.",
+      "UNICODE는 강연, 패널 토론, 실습 워크숍으로 구성된 연례 게임 개발자 컨퍼런스입니다. 배태랑부터 라이징 스타까지 다양한 개발자들이 함께 모여 지식을 나누고, 새로운 기술을 탐구하며, 게임 개발의 미래를 논의합니다.",
     link: "https://unicode.unidev.kr/",
     icon: Code2,
+    image: unicodeImage,
     imagePosition: "left" as const,
   },
 ];
@@ -121,7 +127,7 @@ const Index = () => {
             <div className={`animate-soft-land ${event.imagePosition === "right" ? "md:[direction:ltr]" : ""}`} style={{ animationDelay: '0.1s' }}>
               <div className="overflow-hidden rounded-lg border border-border">
                 <img
-                  src={eventPlaceholder}
+                  src={event.image}
                   alt={`${event.title} event`}
                   className="w-full aspect-video object-cover"
                   loading="lazy"
@@ -166,11 +172,8 @@ const Index = () => {
       ))}
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 text-center">
-        <p className="text-muted-foreground text-xs tracking-widest uppercase font-mono">
-          © {new Date().getFullYear()} UNIDEV
-        </p>
-      </footer>
+
+      <Footer />
     </div>
   );
 };
