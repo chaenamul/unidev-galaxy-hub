@@ -15,7 +15,7 @@ const Footer = () => {
 
             <nav className="flex flex-col gap-4 text-sm text-muted-foreground">
               <a
-                href="https://unicode.unidev.kr/"
+                href="https://unicon.unidev.kr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-foreground transition-colors"
