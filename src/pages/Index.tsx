@@ -172,7 +172,7 @@ const Index = () => {
                 className="group/btn font-mono uppercase tracking-wider"
               >
                 <a href={event.link} target="_blank" rel="noopener noreferrer">
-                  Learn More
+                  Open Link
                   <ExternalLink className="w-4 h-4 ml-1 transition-transform group-hover/btn:translate-x-0.5" />
                 </a>
               </Button>
