@@ -36,7 +36,7 @@ const eventSections = [
     subtitle: "Indie Game Show",
     description:
       "UNICON은 학생 개발자들이 자신의 게임을 실제 관객 앞에서 선보이는 대표적인 인디 게임 전시 행사입니다. 완성도 높은 작품이든 초기 프로토타입이든, 여러분의 비전을 공유하고 개발자와 플레이어들로부터 생생한 피드백을 받을 수 있는 무대입니다.",
-    link: "https://unicode.unidev.kr/",
+    link: "https://unicon.unidev.kr/",
     icon: Gamepad2,
     image: uniconImage,
     imagePosition: "left" as const,
