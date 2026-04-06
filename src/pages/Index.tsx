@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const events = [
   {
     title: "UNICON",
-    subtitle: "Indie Game Show",
+    subtitle: "대학생 게임 전시회",
     description:
       "전국의 대학생 게임 개발 동아리에서 만든 게임들의 전시 및 시연, 유저의 피드백, 우수 게임 시상을 통해 대학생들의 게임 개발 의욕을 고취시킵니다.",
     icon: Gamepad2,
@@ -18,7 +18,7 @@ const events = [
   },
   {
     title: "UNIJAM",
-    subtitle: "Gamejam for Members",
+    subtitle: "대학생 게임잼",
     description:
       "전국의 대학생 게임 개발 동아리 회원들이 즉석에서 팀을 구성하여 2박 3일간 게임 개발에 도전하는 게임잼입니다.",
     icon: Trophy,
@@ -26,7 +26,7 @@ const events = [
   },
   {
     title: "UNICODE",
-    subtitle: "Game Developers Conference",
+    subtitle: "인디 개발 컨퍼런스",
     description:
       "현업자, UNICON 수상자들을 포함한 다양한 연사분들을 초청하여 게임 개발의 재미와 지식을 공유하는 온라인/오프라인 병행 컨퍼런스입니다.",
     icon: Code2,
