@@ -1,5 +1,6 @@
 import { Gamepad2, Trophy, Code2, ExternalLink } from "lucide-react";
 import unidevLogo from "@/assets/UNIDEV_Logo_Horizontal.png";
+import unidevLogoHero from "@/assets/UNIDEV_Logo_Hero.png";
 import { Button } from "@/components/ui/button";
 import uniconImage from "@/assets/unicon.jpg"
 import unijamImage from "@/assets/unijame.jpg";
@@ -11,22 +12,25 @@ const events = [
     title: "UNICON",
     subtitle: "Indie Game Show",
     description:
-      "여러분의 인디 게임을 세상에 선보여 보세요. 플레이, 발표, 그리고 개발자들과 교류할 수 있는 대표 전시 행사입니다.",
+      "전국의 대학생 게임 개발 동아리에서 만든 게임들의 전시 및 시연, 유저의 피드백, 우수 게임 시상을 통해 대학생들의 게임 개발 의욕을 고취시킵니다.",
     icon: Gamepad2,
+    link: "https://unicon.unidev.kr/",
   },
   {
     title: "UNIJAM",
     subtitle: "Gamejam for Members",
     description:
-      "48시간, 하나의 주제, 무한한 가능성. 팀 또는 개인으로 참여해, 처음부터 게임을 만들어 창의력의 한계를 확장해 보세요.",
+      "전국의 대학생 게임 개발 동아리 회원들이 즉석에서 팀을 구성하여 2박 3일간 게임 개발에 도전하는 게임잼입니다.",
     icon: Trophy,
+    link: "https://on.com2us.com/esg/unijam-with-com2us-gamejam-sketch/",
   },
   {
     title: "UNICODE",
     subtitle: "Game Developers Conference",
     description:
-      "베테랑부터 라이징 스타까지, 다양한 개발자들을 만나보세요. 강연, 패널, 워크숍을 통해 게임 개발 역량을 한 단계 끌어올려 보세요.",
+      "현업자, UNICON 수상자들을 포함한 다양한 연사분들을 초청하여 게임 개발의 재미와 지식을 공유하는 온라인/오프라인 병행 컨퍼런스입니다.",
     icon: Code2,
+    link: "https://unicode.unidev.kr/",
   },
 ];
 
@@ -74,9 +78,9 @@ const Index = () => {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center h-[50vh] px-6">
         <img
-          src={unidevLogo}
+          src={unidevLogoHero}
           alt="UNIDEV - Game Developers Group"
-          className="w-full max-w-2xl mb-8 invert animate-soft-land"
+          className="w-full max-w-2xl mb-8 animate-soft-land"
         />
         <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono animate-soft-land" style={{ animationDelay: '0.1s' }}>
           Game Developers Group
@@ -90,29 +94,35 @@ const Index = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {events.map((event, idx) => (
-            <div
-              key={event.title}
-              onClick={() => scrollToSection(event.title)}
-              className="group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
-              style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
-            >
-              <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
-              <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
-                {event.title}
-              </h3>
-              <p className="text-muted-foreground text-sm uppercase tracking-widest mb-4">
-                {event.subtitle}
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
-                {event.description}
-              </p>
-            </div>
+            
+            <a href={event.link} target="_blank" rel="noopener noreferrer">
+              <div
+                key={event.title}
+                className="relative group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
+                style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
+              >
+                <span className="absolute top-4 right-5 text-xs font-mono tracking-widest" style={{ color: '#ffffff' }}>
+                  Open Link
+                </span>
+                <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+                <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
+                  {event.title}
+                </h3>
+                <p className="text-muted-foreground text-sm uppercase tracking-widest mb-4">
+                  {event.subtitle}
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
+                  {event.description}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
       </section>
 
       {/* Event Detail Sections */}
-      {eventSections.map((event, index) => (
+      {/* false: disabled this section */}
+      {false && eventSections.map((event, index) => (
         <section
           key={event.title}
           id={`section-${event.title}`}
