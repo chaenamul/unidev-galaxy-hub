@@ -12,16 +12,16 @@ const events = [
     title: "UNICON",
     subtitle: "대학생 게임 전시회",
     description:
-      "전국의 대학생 게임 개발 동아리에서 만든 게임들의 전시 및 시연, 유저의 피드백, 우수 게임 시상을 통해 대학생들의 게임 개발 의욕을 고취시킵니다.",
-    icon: Gamepad2,
+      "전국의 대학생 게임 개발 동아리에서 만든 게임들의 전시회를 개최하여, 유저 피드백과 우수 게임 시상을 통해 대학생들의 게임 개발 경험을 증진합니다.",
+    icon: Trophy,
     link: "https://unicon.unidev.kr/",
   },
   {
     title: "UNIJAM",
     subtitle: "대학생 게임잼",
     description:
-      "전국의 대학생 게임 개발 동아리 회원들이 즉석에서 팀을 구성하여 2박 3일간 게임 개발에 도전하는 게임잼입니다.",
-    icon: Trophy,
+      "UNIDEV의 회원들이 즉석에서 팀을 구성해 2박 3일간 쉼 없이 게임 개발에 몰입하는 게임잼으로, 압축된 경험을 통해 실전 개발 역량을 끌어올립니다.",
+    icon: Gamepad2,
     link: "https://on.com2us.com/esg/unijam-with-com2us-gamejam-sketch/",
   },
   {
@@ -82,8 +82,8 @@ const Index = () => {
           alt="UNIDEV - Game Developers Group"
           className="w-full max-w-2xl mb-8 animate-soft-land"
         />
-        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase font-mono animate-soft-land" style={{ animationDelay: '0.1s' }}>
-          Game Developers Group
+        <p className="text-muted-foreground text-lg md:text-xl tracking-widest uppercase animate-soft-land" style={{ animationDelay: '0.1s', fontFamily: 'Pretendard, sans-serif' }}>
+          전국 대학생 게임 개발 동아리 연합
         </p>
       </section>
 
