@@ -4,7 +4,7 @@ import unidevLogoHero from "@/assets/UNIDEV_Logo_Hero.png";
 import { Button } from "@/components/ui/button";
 import uniconImage from "@/assets/unicon.jpg"
 import unijamImage from "@/assets/unijame.jpg";
-import unicodeImage from "@/assets/unicode.jpg"
+import unicodeImage from "@/assets/unicode_2.jpg"
 import Footer from "@/components/Footer";
 
 const events = [
@@ -73,6 +73,8 @@ const Index = () => {
     el?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const isEventSectionsEnabled = true;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -94,35 +96,32 @@ const Index = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {events.map((event, idx) => (
-            
-            <a href={event.link} target="_blank" rel="noopener noreferrer">
-              <div
-                key={event.title}
-                className="relative group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
-                style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
-              >
-                <span className="absolute top-4 right-5 text-xs font-mono tracking-widest" style={{ color: '#ffffff' }}>
-                  Open Link
-                </span>
-                <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
-                <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
-                  {event.title}
-                </h3>
-                <p className="text-muted-foreground text-sm uppercase tracking-widest mb-4">
-                  {event.subtitle}
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
-                  {event.description}
-                </p>
-              </div>
-            </a>
+            <div
+              key={event.title}
+              onClick={() => scrollToSection(event.title)}
+              className="relative group border border-border rounded-lg p-8 bg-card hover:bg-accent transition-colors duration-300 cursor-pointer animate-soft-land"
+              style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
+            >
+              <span className="absolute top-4 right-5 text-xs font-mono tracking-widest text-muted-foreground">
+                Learn More
+              </span>
+              <event.icon className="w-8 h-8 mb-6 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+              <h3 className="text-2xl font-bold tracking-tight mb-1 font-mono">
+                {event.title}
+              </h3>
+              <p className="text-muted-foreground text-sm uppercase tracking-widest mb-4">
+                {event.subtitle}
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
+                {event.description}
+              </p>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Event Detail Sections */}
-      {/* false: disabled this section */}
-      {false && eventSections.map((event, index) => (
+      {isEventSectionsEnabled && eventSections.map((event, index) => (
         <section
           key={event.title}
           id={`section-${event.title}`}
