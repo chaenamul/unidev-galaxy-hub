@@ -39,7 +39,7 @@ const eventSections = [
     title: "UNICON",
     subtitle: "Indie Game Show",
     description:
-      "UNICON은 학생 개발자들이 자신의 게임을 실제 관객 앞에서 선보이는 대표적인 인디 게임 전시 행사입니다. 완성도 높은 작품이든 초기 프로토타입이든, 여러분의 비전을 공유하고 개발자와 플레이어들로부터 생생한 피드백을 받을 수 있는 무대입니다.",
+      "UNICON은 대학생 개발자들이 자신의 게임을 실제 관객 앞에서 선보일 수 있는 인디 게임 전시 행사입니다. 완성도 높은 작품이든 초기 프로토타입이든, 여러분의 비전을 공유하고 개발자와 플레이어들로부터 생생한 피드백을 받을 수 있는 무대입니다.",
     link: "https://unicon.unidev.kr/",
     icon: Gamepad2,
     image: uniconImage,
@@ -49,7 +49,7 @@ const eventSections = [
     title: "UNIJAM",
     subtitle: "Gamejam for Members",
     description:
-      "UNIJAM은 오직 UNIDEV 회원만을 위한 48시간 게임잼입니다. 예고 없이 주어지는 주제에 따라 참가자들은 팀을 이루거나 개인으로 참여해, 처음부터 플레이 가능한 게임을 직접 만들어 완성하게 됩니다. 강도 높은 몰입과 창의성을 경험할 수 있는, UNIDEV의 대표적인 핵심 프로그램입니다.",
+      "UNIJAM은 2박 3일간 진행되는 게임잼입니다. 현장에서 주어지는 주제에 따라 참가자들은 팀빌딩부터 시작하여, 플레이 가능한 게임을 처음부터 만들어 완성하게 됩니다. 강도 높은 몰입과 창의성을 경험할 수 있는 프로그램입니다.",
     link: "https://on.com2us.com/esg/unijam-with-com2us-gamejam-sketch/",
     icon: Trophy,
     image: unijamImage,
@@ -59,7 +59,7 @@ const eventSections = [
     title: "UNICODE",
     subtitle: "Game Developers Conference",
     description:
-      "UNICODE는 강연, 패널 토론, 실습 워크숍으로 구성된 연례 게임 개발자 컨퍼런스입니다. 배태랑부터 라이징 스타까지 다양한 개발자들이 함께 모여 지식을 나누고, 새로운 기술을 탐구하며, 게임 개발의 미래를 논의합니다.",
+      "현업자, UNICON 수상자들을 포함한 다양한 연사분들을 초청하여 게임 개발의 재미와 지식을 공유하는 온라인/오프라인 병행 컨퍼런스입니다.",
     link: "https://unicode.unidev.kr/",
     icon: Code2,
     image: unicodeImage,
